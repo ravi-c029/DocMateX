@@ -1,1 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <title>DocMateX</title>
+</head>
+<body>  
+    <nav class="navbar">
+        <div class="navbar-container">           
+           <a href="#" class="navbar-logo">
+               <img src="logo_2.jpg" alt="DocMateX">
+               <span>DocMateX</span>
+           </a>
+            <div class="navbar-menu" id="navbarMenu">
+                <a href="#network" class="navbar-item" onclick="scrollToSection(event, 'network')">Network</a>
+                <a href="#portfolio" class="navbar-item">Portfolio</a>
+                <a href="#jobs" class="navbar-item">Jobs</a>
+                <a href="#learning" class="navbar-item">Learning</a>
+                <a href="#hospitals" class="navbar-item">Hospitals</a>
+                <a href="#gettoknowus" class="navbar-item">🚀 Get to Know Us</a>
+            </div>
+            <div class="navbar-toggle" id="navbarToggle">
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+                <span class="navbar-toggle-icon"></span>
+            </div>
+        </div>
+    </nav>
+
+     
+    <div class="container">
+        <div class="left">
+            <h1>Welcome to DocMateX</h1>
+            <p>Empowering HealthCare Connections</p>
+        </div>
+        <div class="right">
+            <h2>Register</h2>
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button class="btn">Sign Up</button>
+            <div class="links">
+                <a href="#">Forgot Password?</a>
+                <a href="#">Not a Member yet?</a>
+            </div>
+        </div>
+    </div>
+    
+    <section id="network" class="network">
+        <h2>Professional Connections</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="doctor1.jpg" alt="Doctor Profile" class="card-img">
+                <h3 class="card-name">Dr. Mikhail Varshavski</h3>
+                <p class="card-p"> ✔️ Primary Care Physician & Social Media Influencer </p>
+                    
+                <div class="card-actions">
+                    <button class="card-btn connect-btn" onclick="scrollToSection(event, 'network')">Connect</button>
+                    <button class="card-btn message-btn">Message</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="doctor2.jpg" alt="Doctor Profile" class="card-img">
+                <h3 class="card-name">Dr. Cuterus</h3>
+                <p class="card-p"> Gynecologist breaking taboos on reproductive health </p>
+                <div class="card-actions">
+                    <button class="card-btn connect-btn" onclick="scrollToSection(event, 'network')">Connect</button>
+                    <button class="card-btn message-btn">Message</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="doctor3.jpg" alt="Doctor Profile" class="card-img">
+                <h3 class="card-name">Dr. Rashmi Shetty</h3>
+                <p class="card-p"> The Chief Dermatologist at Ra Aesthetics and Dermatology </p>
+                <div class="card-actions">
+                    <button class="card-btn connect-btn" onclick="scrollToSection(event, 'network')">Connect</button>
+                    <button class="card-btn message-btn">Message</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="doctor4.jpg" alt="Doctor Profile" class="card-img">
+                <h3 class="card-name">Dr. Manan Vora</h3>
+                <p class="card-p"> An orthopedic surgeon, Health & Longevity Educator</p>
+                <div class="card-actions">
+                    <button class="card-btn connect-btn" onclick="scrollToSection(event, 'network')">Connect</button>
+                    <button class="card-btn message-btn">Message</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="doctor5.jpg" alt="Doctor Profile" class="card-img">
+                <h3 class="card-name">Dr. Anuj Pachhel</h3>
+                <p class="card-p"> A PGY1 Internal Medicine resident. Working as an influencer.</p>
+                <div class="card-actions">
+                    <button class="card-btn connect-btn" onclick="scrollToSection(event, 'network')">Connect</button>
+                    <button class="card-btn message-btn">Message</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="doctor6.jpg" alt="Doctor Profile" class="card-img">
+                <h3 class="card-name">Dr. Mitali Sharma</h3>
+                <p class="card-p"> Pursuing MBBS from Maulana Azad Medical College </p>
+                <div class="card-actions">
+                    <button class="card-btn connect-btn" onclick="scrollToSection(event, 'network')">Connect</button>
+                    <button class="card-btn message-btn">Message</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="portfolio" class="portfolio">
+        <h2>Doctor's Portfolio</h2>
+        <div id="portfolio-container" class="portfolio-grid"></div>
+
+        <div class="build-portfolio">
+            <h3>Build Your Portfolio</h3>
+            <form id="portfolio-form">
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <input type="text" id="hospital" placeholder="College or Hospital Name" required>
+                <input type="text" id="specialization" placeholder="Your Specialization" required>
+                <input type="number" id="gradYear" placeholder="Graduation Year" required>
+                <textarea id="about" placeholder="Tell us about yourself..." required></textarea>
+                <button type="submit" class="btn">Create Portfolio</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="jobs" class="job-section">
+        <h2>Find Your Next Opportunity</h2>
+                
+        <div class="job-filters">
+            <button class="filter-btn active" onclick="filterJobs('all')">All</button>
+            <button class="filter-btn" onclick="filterJobs('job')">Jobs</button>
+            <button class="filter-btn" onclick="filterJobs('internship')">Internships</button>
+        </div>
+            
+        <div id="job-container" class="job-grid"></div>
+        
+    </section>
+
+
+    <section id="learning">
+        <h2>Learning Hub - Know Your Health</h2>
+        <div class="learning-container" id="learning-container"></div>
+    </section>
+
+
+    <section id="hospitals">
+        <h2>Hospitals</h2>
+        <div class="hospital-container" id="hospital-container"></div>
+    </section>
+
+    <section id="gettoknowus">
+        <h2>Get to Know DocMateX</h2>
+        <p class="intro-text">Connecting Healthcare Professionals to Opportunities and Growth.</p>
+        
+        <div class="gettoknowus-container">
+            <div class="gettoknowus-card">
+                <i class="fas fa-book-medical"></i>
+                <h3>Our Story</h3>
+                <p>DocMateX was created to bridge the gap between talented medical professionals and top-tier healthcare opportunities worldwide.</p>
+            </div>
+    
+            <div class="gettoknowus-card">
+                <i class="fas fa-bullseye"></i>
+                <h3>Our Mission</h3>
+                <p>We aim to empower healthcare workers by providing a centralized platform for jobs, internships, and collaborations.</p>
+            </div>
+    
+            <div class="gettoknowus-card">
+                <i class="fas fa-users"></i>
+                <h3>Our Community</h3>
+                <p>Join a thriving network of medical experts, researchers, and students working together for a healthier world.</p>
+            </div>
+    
+            <div class="gettoknowus-card">
+                <i class="fas fa-eye"></i>
+                <h3>Our Vision</h3>
+                <p>To revolutionize the healthcare job market by making learning, hiring, and networking more accessible.</p>
+            </div>
+        </div>
+    
+        <a href="#signup" class="join-btn">Join DocMateX Today</a>
+    </section>
+    
+       
+    <footer id="footer">
+        <div class="footer-container">
+            <p>&copy; 2025 DocMateX. All Rights Reserved.</p>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://x.com/docmatex?t=YNET9Qw-lYCgWLTBYc6-iQ&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/company/docmatex/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/docmatex?igsh=Nm1zNHVsNmQ5dWFr" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
 
